@@ -1,0 +1,85 @@
+:root{
+    --bg-1: rgb(2, 2, 2);
+    --bg-2: rgb(28, 28, 32);
+    --bg-3: rgb(45, 45, 48);
+}
+
+*{
+    margin: 0;   padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-2);
+}
+
+.container{
+    width: 300px;
+    padding: 15px;
+    background-color: var(--bg-2);
+    border-radius: 10px;
+    box-shadow: -2px -2px 12px var(--bg-3),
+                2px 2px 15px var(--bg-1);
+}
+
+.input{
+    font-family: sans-serif;
+    font-size: 25px;
+    user-select: none;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: rgb(100, 78, 78);
+    color: rgb(240, 220, 220);
+    border-radius: 10px;
+}
+.prev,
+.curr{
+    height: 25px;
+    color: rgb(240, 220, 220);
+    padding-right: 10px;
+    text-align: end;
+}
+
+.prev{
+    font-size: 18px;
+    color: rgb(9, 255, 50);
+}
+
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+}
+
+button{
+    user-select: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 8px 4px;
+    background-color: var(--bg-2);
+    color: rgb(165, 155, 155);
+    box-shadow: -0.5px -0.5px 6px var(--bg-3),
+                1px 1px 10px var(--bg-1);
+}
+
+button:active{
+    box-shadow: -0.5px -0.5px 10px var(--bg-1),
+                1px 1px 6px var(--bg-3);
+}
+
+.solve{
+    grid-column: 2 / span 2;
+}
+
+button:nth-child(16){
+    grid-area: 4 / 4 / span 2 / span 1;
+}
